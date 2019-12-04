@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8c2199d5-6c85-4927-9559-babf07079ae1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cylinder.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +33,8 @@
         <option value="$PROJECT_DIR$/Assets/Circle.cs" />
         <option value="$PROJECT_DIR$/Assets/Utils.cs" />
         <option value="$PROJECT_DIR$/Assets/MeshGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +96,7 @@
       <workItem from="1574297744151" duration="1103000" />
       <workItem from="1574499210749" duration="10520000" />
       <workItem from="1574728662660" duration="4466000" />
-      <workItem from="1575405443547" duration="7328000" />
+      <workItem from="1575405443547" duration="9449000" />
     </task>
     <servers />
   </component>

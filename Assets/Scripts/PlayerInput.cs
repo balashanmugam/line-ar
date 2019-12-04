@@ -25,13 +25,10 @@ public class PlayerInput : MonoBehaviour
     
     private void Update() {
         if (Input.GetButtonDown("Jump")) {
-            Debug.Log("Space pressed. ");
             player.StartGrow = !player.StartGrow;
         }
-        
         // control input.
         horizontal = Input.GetAxis("Horizontal");
-
 
     }
 }

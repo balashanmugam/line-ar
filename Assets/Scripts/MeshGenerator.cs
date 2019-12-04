@@ -9,8 +9,6 @@ using UnityEngine.Experimental.PlayerLoop;
 
 namespace LineAR {
     public class MeshGenerator : MonoBehaviour {
-
-        
         [SerializeField] private bool startGrow = false;
         [SerializeField] private GameObject unitCircle;
 
@@ -23,6 +21,11 @@ namespace LineAR {
 
         [SerializeField] private PlayerInput input;
 
+        [SerializeField] private Vector3 turnRot = new Vector3(0,10,0);
+
+        private float currentAngle = 0;
+        private float angle = 10;
+        private const float turnAngle = 2;
         public bool StartGrow
         {
             get => startGrow;
@@ -32,11 +35,14 @@ namespace LineAR {
         private void Start() {
             last = this.gameObject;
             input = GetComponent<PlayerInput>();
-            Spawn();
+            Spawn(Quaternion.identity);
         }
-        private void Spawn() {
+
+        private void Spawn(Quaternion rot) {
             //spawn a small cylinder
-            var obj = Instantiate(unitCircle, last.transform.position + (transform.forward * 0.05f), Quaternion.identity, gameObject.transform);
+            
+            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.05f),
+                 rot, gameObject.transform);
             if (obj != null) {
                 last = obj;
             }
@@ -45,23 +51,25 @@ namespace LineAR {
         private void Update() {
             // get input from the PlayerInput class
             horizontal = input.Horizontal;
-            Debug.Log(horizontal);
+            angle = 0;
+            if (horizontal < 0) {
+                // turn left
+                angle = -turnAngle;
+            }else if (horizontal > 0) {
+                // turn right
+                angle = turnAngle;
+            }
         }
 
         private void FixedUpdate() {
             // keep spawning
             if (!startGrow) return;
-            
+
             timer -= Time.fixedDeltaTime;
             if (timer <= 0) {
-                Spawn();
+                currentAngle += angle;
+                Spawn(Quaternion.Euler(0, currentAngle,0));
                 timer = TIMESTEP;
-            }
-            // rotate according to user input
-            if (horizontal < 0 ) {
-                // Forward to left
-            } else if (horizontal > 0) {
-                // Forward to right
             }
         }
     }

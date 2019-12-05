@@ -53,7 +53,7 @@ MonoBehaviour:
     type: 3}
   rbCirclePrefab: {fileID: 1801241420949308585, guid: cf3281dc90b494d69a12b50b5a8798d0,
     type: 3}
-  explosionPrefab: {fileID: 100006, guid: 10b506478f435cf4ca5bbcf982c59f08, type: 3}
+  explosionPrefab: {fileID: 100004, guid: 6e8c7c425e5bc374daf95a774767b1e3, type: 3}
   last: {fileID: 0}
   rbCircle: {fileID: 0}
   input: {fileID: 0}

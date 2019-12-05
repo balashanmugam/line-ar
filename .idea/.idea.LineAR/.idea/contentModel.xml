@@ -121,10 +121,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="EnemyBot.cs" t="Include" />
+          <e p="GamaManager.cs" t="Include" />
           <e p="MeshCollision.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
           <e p="Stadium.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="Singleton.cs" t="Include" />
+          </e>
           <e p="Utils.cs" t="Include" />
         </e>
         <e p="StreamingAssets" t="Include">

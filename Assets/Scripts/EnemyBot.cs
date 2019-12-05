@@ -34,8 +34,16 @@ public class EnemyBot : MonoBehaviour {
 
     private void OnEnable() {
         // Finding spawn point
-        int randomIndex = 0; //Random.Range(0, GameManager.Instance.SpawnPoint.Count);
-        pathParent = GameManager.Instance.SpawnPoint[randomIndex];
+
+        bool isUnique = false;
+        while (!isUnique) {
+            var randomIndex = Random.Range(0, GameManager.Instance.SpawnPoint.Count);
+            pathParent = GameManager.Instance.SpawnPoint[randomIndex];
+            if (GameManager.Instance.SpawnBools[randomIndex] == true) continue;
+            else {
+                isUnique = true;
+            }
+        }
 
         int pathRandomIndex = Random.Range(0, pathParent.childCount);
         for (int i = 0; i < pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.childCount; i++) {

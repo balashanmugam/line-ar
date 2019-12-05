@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1650538301, guid: bcce3ec0d682d4cc1bef3c7378cc0579, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcce3ec0d682d4cc1bef3c7378cc0579, type: 3}
 --- !u!1001 &1364958616
@@ -340,6 +344,8 @@ MonoBehaviour:
   spawnPoint: []
   randomPoint: 0
   randomPath: 0
+  spawnBools: 
+  enemiesCount: 1
 --- !u!4 &1500730796
 Transform:
   m_ObjectHideFlags: 0

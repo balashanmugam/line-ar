@@ -13,7 +13,6 @@ public class UIManager : MonoBehaviour {
 
     public void StartGame() {
         player.StartGrow = !player.StartGrow;
-        Debug.Log("Game Started!");
     }
     
     private void OnDisable() {

@@ -118,7 +118,24 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3813360202123199658, guid: c1d31818ee60249e3bffdcd4558e173b, type: 3}
+    - {fileID: 2398240754425287374, guid: c1d31818ee60249e3bffdcd4558e173b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1d31818ee60249e3bffdcd4558e173b, type: 3}
 --- !u!4 &5400675175493517922 stripped
 Transform:

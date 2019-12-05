@@ -122,7 +122,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="EnemyBot.cs" t="Include" />
-          <e p="GamaManager.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="MeshCollision.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />

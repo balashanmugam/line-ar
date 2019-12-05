@@ -27,6 +27,7 @@ namespace LineAR {
         [SerializeField] private Vector3 turnRot = new Vector3(0,10,0);
 
         [SerializeField] private GameObject rbCircle;
+        [SerializeField] private bool isPlayer;
         
         private float currentAngle = 0;
         private float angle = 10;
@@ -36,6 +37,12 @@ namespace LineAR {
         {
             get => startGrow;
             set => startGrow = value;
+        }
+
+        public GameObject Last
+        {
+            get => last;
+            set => last = value;
         }
 
         private void Awake() {
@@ -52,7 +59,9 @@ namespace LineAR {
         }
 
         private void Start() {
-
+            if (GetComponentInChildren<PlayerInput>() != null) {
+                isPlayer = true;
+            }
 
         }
 
@@ -62,16 +71,23 @@ namespace LineAR {
             var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f),
                  rot, gameObject.transform);
             
+
+            
             // Spawn that single rigidbody infront of this.
-            rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2));
+            rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2f));
             rbCircle.transform.rotation = last.transform.rotation;
             
             if (obj != null) {
                 last = obj;
             }
+            
+
         }
 
         private void Update() {
+            if (!startGrow) return;
+            if (!isPlayer) return;
+            
             // get input from the PlayerInput class
             horizontal = input.Horizontal;
             angle = 0;

@@ -15,7 +15,6 @@ namespace LineAR
             GetComponent<PlaneFinderBehaviour>().enabled = false;
             
             GetComponent<AnchorInputListenerBehaviour>().enabled = false;
-            Debug.Log("Log: Disabled Input for plane placement!");
         }
     }
 }

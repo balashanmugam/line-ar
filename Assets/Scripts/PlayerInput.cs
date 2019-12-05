@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class PlayerInput : MonoBehaviour {
     // Should have an instance of the player.
     [SerializeField] private MeshGenerator player;
+    [SerializeField] private bool isAlive = true;
 
     private float horizontal;
 
@@ -18,6 +19,16 @@ public class PlayerInput : MonoBehaviour {
     {
         get => horizontal;
         set => horizontal = value;
+    }
+
+    public bool IsAlive
+    {
+        get => isAlive;
+        set {
+            if (value == false) {
+                player.StartGrow = false;
+            }
+        }
     }
 
     private void Start() {
@@ -35,7 +46,7 @@ public class PlayerInput : MonoBehaviour {
 #endif
 
         // control input for mobile.
-#if UNITY_ANDROID
+#if UNITY_ANDROID 
         if (!player.StartGrow) return;
         if (Input.touchCount > 0) {
             Touch t = Input.GetTouch(0);

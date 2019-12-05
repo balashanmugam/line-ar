@@ -49,13 +49,14 @@ MonoBehaviour:
   TIMESTEP: 0.025
   timer: 0.05
   horizontal: 0
-  unitCircle: {fileID: 1801241420949308585, guid: aafc0780d535e442f877440891dfddaa,
+  unitCircle: {fileID: 1801241420949308585, guid: 07b838f787bf6464cb942350acde642c,
     type: 3}
   rbCirclePrefab: {fileID: 1801241420949308585, guid: cf3281dc90b494d69a12b50b5a8798d0,
     type: 3}
   last: {fileID: 0}
   rbCircle: {fileID: 0}
   input: {fileID: 0}
+  playerMaterial: {fileID: 2100000, guid: 561e5efe5327efa4eaa4e07a9b681b3b, type: 2}
 --- !u!114 &6071015583871249587
 MonoBehaviour:
   m_ObjectHideFlags: 0

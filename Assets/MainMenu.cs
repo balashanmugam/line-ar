@@ -9,6 +9,15 @@ public class MainMenu : MonoBehaviour
     public GameObject loadingscreen;
     public Slider slider;
     public Text progressText;
+
+    private void Awake()
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("menu");
+        if (objects.Length > 1)
+            Destroy(this.gameObject); // we do this because when we shift from the mesh scene back to the men, another gameobject gets created and the music becomes unstable.
+        DontDestroyOnLoad(this.gameObject); //not to destroy this object as the scene changes
+
+    }
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsync(sceneIndex));

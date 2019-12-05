@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using LineAR;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Input manager class
@@ -10,6 +11,7 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour {
     // Should have an instance of the player.
     [SerializeField] private MeshGenerator player;
+    [SerializeField] private bool isAlive = true;
 
     private float horizontal;
 
@@ -17,6 +19,16 @@ public class PlayerInput : MonoBehaviour {
     {
         get => horizontal;
         set => horizontal = value;
+    }
+
+    public bool IsAlive
+    {
+        get => isAlive;
+        set {
+            if (value == false) {
+                player.StartGrow = false;
+            }
+        }
     }
 
     private void Start() {
@@ -34,7 +46,8 @@ public class PlayerInput : MonoBehaviour {
 #endif
 
         // control input for mobile.
-#if UNITY_ANDROID
+#if UNITY_ANDROID 
+        if (!player.StartGrow) return;
         if (Input.touchCount > 0) {
             Touch t = Input.GetTouch(0);
             if (t.phase == TouchPhase.Began || t.phase == TouchPhase.Stationary || t.phase != TouchPhase.Ended) {
@@ -44,6 +57,9 @@ public class PlayerInput : MonoBehaviour {
                 else if (t.position.x > Screen.width / 2) {
                     horizontal = 1;
                 }
+            }
+            else {
+                horizontal = 0;
             }
         }
 #endif

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8007556919878440248}
   - component: {fileID: 8007556919878440251}
-  - component: {fileID: 6071015583871249587}
+  - component: {fileID: 1405317232}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,8 @@ MonoBehaviour:
   startGrow: 0
   unitCircle: {fileID: 1801241420949308585, guid: aafc0780d535e442f877440891dfddaa,
     type: 3}
-  rbCirclePrefab: {fileID: 0}
+  rbCirclePrefab: {fileID: 1801241420949308585, guid: cf3281dc90b494d69a12b50b5a8798d0,
+    type: 3}
   last: {fileID: 0}
   TIMESTEP: 0.025
   timer: 0.05
@@ -55,8 +56,7 @@ MonoBehaviour:
   input: {fileID: 0}
   turnRot: {x: 0, y: 10, z: 0}
   rbCircle: {fileID: 0}
-  isPlayer: 0
---- !u!114 &6071015583871249587
+--- !u!114 &1405317232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,8 +65,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8007556919878440250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948bef799ebf34c54ae7463a7b1a15eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6be3a0e4730f84c7d8a9607640ee4196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  pathParent: {fileID: 0}
+  pathPoints: []
+  currentIndex: 0
+  mesh: {fileID: 0}
+  thresholdDistance: 0.08
   isAlive: 1

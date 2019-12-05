@@ -11,10 +11,10 @@ namespace LineAR
         /// Disables the input of the anchor plane attached to this gameobject.
         /// Usually called after the player setup the plane. It's locked.
         /// </summary>
-        public void DisableAnchorInput()
-        {
+        public void DisableAnchorInput() {
+            GetComponent<PlaneFinderBehaviour>().enabled = false;
+            
             GetComponent<AnchorInputListenerBehaviour>().enabled = false;
-            Debug.Log("Log: Disabled Input for plane placement!");
         }
     }
 }

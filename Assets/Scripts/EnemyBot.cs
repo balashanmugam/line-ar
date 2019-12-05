@@ -28,7 +28,6 @@ public class EnemyBot : MonoBehaviour {
         }
     }
 
-
     private void Start() {
         mesh = GetComponent<MeshGenerator>();
     }

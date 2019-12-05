@@ -43,16 +43,6 @@ public class EnemyBot : MonoBehaviour {
     private void Start() {
         mesh = GetComponent<MeshGenerator>();
     }
-
-    private void OnEnable() {
-        // Finding spawn point
-//        int pathRandomIndex = Random.Range(0, pathParent.childCount);
-//        for (int i = 0; i < pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.childCount; i++) {
-//            pathPoints.Add(pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.GetChild(i));
-//        }
-    }
-    // Follow the path 
-
     public void Follow() {
         // Look at point
 

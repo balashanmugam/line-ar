@@ -2,22 +2,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour {
-    [SerializeField] private Button startButton;
+public class UIManager : Singleton<UIManager> {
 
-    [SerializeField] private MeshGenerator player;
+    [SerializeField] private GameObject endGamePanel;
 
-    private void OnEnable() {
-        startButton.onClick.AddListener(StartGame);
+    public void ToggleEndGame(bool state) {
+        endGamePanel.SetActive(state);
     }
 
-    public void StartGame() {
-        player.StartGrow = !player.StartGrow;
+    public void SetEndMessage(string mess, string score) {
+        endGamePanel.GetComponent<EndGameScript>().SetMessage(mess,score);
     }
-    
-    private void OnDisable() {
-        startButton.onClick.RemoveListener(StartGame);
-    }
-    
-    
 }

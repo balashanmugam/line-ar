@@ -23,6 +23,7 @@ public class MeshCollision : MonoBehaviour {
             if (!player.IsAlive) return;
             Debug.Log("Player Collided with" + other.transform.parent.gameObject.name);
             player.IsAlive = false;
+            GameManager.Instance.DefeatedGame();
         }
     }
 }

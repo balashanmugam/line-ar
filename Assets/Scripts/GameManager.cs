@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 
 public class GameManager : Singleton<GameManager> {
     [SerializeField] private GameObject player;
-
+    [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject EnemyPrefab;
 
     [SerializeField] private GameObject enemy1;
@@ -18,12 +18,13 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField] private List<Transform> spawnPoint;
 
     [SerializeField] private int randomPoint;
-    [SerializeField] private int randomPath;
-
     [SerializeField] private List<bool> spawnBools;
 
     [SerializeField] private int enemiesCount = 1;
 
+    [SerializeField] private int enemyLostCount = 0;
+    
+    
     public Transform SpawnPointParent
     {
         get => _spawnPointParent;
@@ -42,25 +43,60 @@ public class GameManager : Singleton<GameManager> {
         set => spawnBools = value;
     }
 
+    public int EnemyLostCount
+    {
+        get => enemyLostCount;
+        set {
+            enemyLostCount = value;
+            if (enemyLostCount == (enemiesCount + 1) ){
+                WinGame();
+            }
+        }
+    }
+
     private void Start() {
         for (int i = 0; i < _spawnPointParent.childCount; i++) {
             spawnPoint.Add(_spawnPointParent.transform.GetChild(i));
             spawnBools.Add(false);
         }
-
-        // Spawn Player
-        StartCoroutine(SpawnEnemy());
     }
 
-    IEnumerator SpawnEnemy() {
+    public void WinGame() {
+        UIManager.Instance.ToggleEndGame(true);
+        UIManager.Instance.SetEndMessage("You are Victorious!", "high");
+    }
+
+    public void DefeatedGame() {
+        UIManager.Instance.ToggleEndGame(true);
+        UIManager.Instance.SetEndMessage("You were defeated!", "low");
+    }
+
+    public void BeginGame() {
+        // Spawn Player 
+        // Call function from Ground plane placement
+
+        StartCoroutine(SpawnCharacters());
+    }
+
+    IEnumerator StartGame() {
+        yield return new WaitForSeconds(3f);
+
+        enemy1.GetComponent<MeshGenerator>().StartGrow = true;
+        enemy2.GetComponent<MeshGenerator>().StartGrow = true;
+
+        player.GetComponent<MeshGenerator>().StartGrow = true;
+    }
+
+    IEnumerator SpawnCharacters() {
         yield return new WaitForSeconds(0.1f);
+        bool isUnique = false;
 
+        // Spawn enemies
         for (int i = 0; i <= enemiesCount; i++) {
-            bool isUnique = false;
-
+            isUnique = false;
             while (!isUnique) {
                 randomPoint = Random.Range(0, _spawnPointParent.childCount);
-                if(spawnBools[randomPoint] == true) continue;
+                if (spawnBools[randomPoint] == true) continue;
                 else {
                     isUnique = true;
                     spawnBools[randomPoint] = true;
@@ -81,5 +117,22 @@ public class GameManager : Singleton<GameManager> {
                     break;
             }
         }
+
+        //Spawn player
+
+        isUnique = false;
+
+        while (!isUnique) {
+            randomPoint = Random.Range(0, _spawnPointParent.childCount);
+            if (spawnBools[randomPoint] == true) continue;
+            else {
+                isUnique = true;
+                spawnBools[randomPoint] = true;
+            }
+        }
+
+        player = Instantiate(playerPrefab, spawnPoint[randomPoint].position, spawnPoint[randomPoint].rotation);
+
+        StartCoroutine(StartGame());
     }
 }

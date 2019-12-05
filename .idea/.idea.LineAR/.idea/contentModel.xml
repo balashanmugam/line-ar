@@ -121,6 +121,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="EndGameScript.cs" t="Include" />
           <e p="EnemyBot.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="LevelLoader.cs" t="Include" />
@@ -131,6 +132,7 @@
           <e p="PlayerInput.cs" t="Include" />
           <e p="SoundScript.cs" t="Include" />
           <e p="Stadium.cs" t="Include" />
+          <e p="SwitchEndGame.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
           <e p="Utils" t="Include">
             <e p="Singleton.cs" t="Include" />

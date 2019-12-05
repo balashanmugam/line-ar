@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadAsync(int sceneIndex)
     {
+        this.gameObject.SetActive(false);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         loadingscreen.SetActive(true);
         while (!operation.isDone)

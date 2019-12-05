@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8c2199d5-6c85-4927-9559-babf07079ae1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/48 Particle Effect Pack/Effect/Explosion9.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RigidbodyCircle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RigidbodyCircle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +34,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77657AFF-10F3-423B-8360-B40FF8E9348D/73/5842d948/ContentPositioningBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/48 Particle Effect Pack/Script/csDestroyEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77657AFF-10F3-423B-8360-B40FF8E9348D/dc/d445cfc2/HitTestResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,7 +49,6 @@
         <option value="$PROJECT_DIR$/Assets/Utils.cs" />
         <option value="$PROJECT_DIR$/Assets/MeshGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GamaManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Stadium.cs" />
         <option value="$PROJECT_DIR$/Assets/UIManager.cs" />
@@ -57,6 +60,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" />
       </list>
     </option>
   </component>

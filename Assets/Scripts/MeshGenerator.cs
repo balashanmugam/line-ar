@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.Experimental.PlayerLoop;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
+
 
 
 namespace LineAR {
@@ -22,6 +16,7 @@ namespace LineAR {
 
         [SerializeField] private GameObject unitCircle;
         [SerializeField] private GameObject rbCirclePrefab;
+        [SerializeField] private GameObject explosionPrefab;
         [SerializeField] private GameObject last;
         [SerializeField] private GameObject rbCircle;
 
@@ -30,13 +25,23 @@ namespace LineAR {
         public bool StartGrow
         {
             get => startGrow;
-            set => startGrow = value;
+            set {
+                startGrow = value;
+                if (value == false) {
+                    SpawnExplosion();
+                }
+            }
         }
 
         public GameObject Last
         {
             get => last;
             set => last = value;
+        }
+
+        public void SpawnExplosion() {
+            // Spawn explosion at the point of collision
+            var explosion = Instantiate(explosionPrefab, rbCircle.transform.position, rbCircle.transform.rotation);
         }
 
         private void Awake() {

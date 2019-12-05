@@ -57,8 +57,10 @@ public class GameManager : Singleton<GameManager> {
             spawnPoint.Add(_spawnPointParent.transform.GetChild(i));
             spawnBools.Add(false);
         }
-        
-        //BeginGame();
+#if UNITY_EDITOR_OSX || UNITY_EDITOR
+    // Testing code.
+        BeginGame();
+#endif
     }
 
     public void WinGame() {
@@ -74,8 +76,8 @@ public class GameManager : Singleton<GameManager> {
     public void BeginGame() {
         // Spawn Player 
         // Call function from Ground plane placement
-
         StartCoroutine(SpawnCharacters());
+        
     }
 
     IEnumerator StartGame() {

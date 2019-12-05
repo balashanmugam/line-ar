@@ -22,8 +22,10 @@ public class EnemyBot : MonoBehaviour {
     {
         get => isAlive;
         set {
+            isAlive = value;
             if (value == false) {
                 mesh.StartGrow = false;
+                GameManager.Instance.EnemyLostCount++;
             }
         }
     }

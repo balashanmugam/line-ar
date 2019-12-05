@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using LineAR;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Input manager class
@@ -35,6 +36,7 @@ public class PlayerInput : MonoBehaviour {
 
         // control input for mobile.
 #if UNITY_ANDROID
+        if (!player.StartGrow) return;
         if (Input.touchCount > 0) {
             Touch t = Input.GetTouch(0);
             if (t.phase == TouchPhase.Began || t.phase == TouchPhase.Stationary || t.phase != TouchPhase.Ended) {
@@ -44,6 +46,9 @@ public class PlayerInput : MonoBehaviour {
                 else if (t.position.x > Screen.width / 2) {
                     horizontal = 1;
                 }
+            }
+            else {
+                horizontal = 0;
             }
         }
 #endif

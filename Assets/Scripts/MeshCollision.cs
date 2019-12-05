@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using Object = System.Object;
 
-public class MeshCollision : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class MeshCollision : MonoBehaviour {
+
+    //[SerializeField] private GameObject rbCircle;
+
+    private void OnEnable() {
+
+        //rbCircle = this.transform.Find("RigidbodyCircle(Clone)").transform.Find("Cylinder").gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter(Collider other) {
+        Debug.Log(other.gameObject.name);
     }
 }

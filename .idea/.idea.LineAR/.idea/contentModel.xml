@@ -8,6 +8,19 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="48 Particle Effect Pack" t="Include">
+          <e p="Script" t="Include">
+            <e p="csDestroyEffect.cs" t="Include" />
+            <e p="csMouseOrbit.cs" t="Include" />
+            <e p="csParticleEffectPackLightControl.cs" t="Include" />
+            <e p="csParticleMove.cs" t="Include" />
+            <e p="csShowAllEffect.cs" t="Include" />
+          </e>
+          <e p="ShurikenEffectEditor" t="Include">
+            <e p="csShurikenEffectChanger.cs" t="Include" />
+            <e p="csShurikenEffectEditor.cs" t="Include" />
+          </e>
+        </e>
         <e p="Editor" t="Include">
           <e p="Vuforia" t="Include">
             <e p="CylinderTargetTextures" t="Include">
@@ -85,7 +98,30 @@
             </e>
           </e>
         </e>
+        <e p="Minimalist Free v2.4.2" t="Include">
+          <e p="Documentation" t="Include">
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="EditorGUILayoutExtended.cs" t="Include" />
+            <e p="MinimalistClipboard.cs" t="Include" />
+            <e p="MinimalistSkyEditor.cs" t="Include" />
+            <e p="MinimalistStandardEditor.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="BuiltInRenderPipeline" t="Include">
+              <e p="Minimalist Standard LocalSpace.shader" t="Include" />
+              <e p="Minimalist Standard.shader" t="Include" />
+            </e>
+            <e p="LightweightRenderPipeline" t="Include">
+              <e p="Minimalist Standard LocalSpace LWRP.shader" t="Include" />
+              <e p="Minimalist Standard LWRP.shader" t="Include" />
+            </e>
+            <e p="Minimalist Sky.shader" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="MeshCollision.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
           <e p="Stadium.cs" t="Include" />
@@ -96,6 +132,7 @@
             <e p="VuforiaMars_Images.xml" t="Include" />
           </e>
         </e>
+        <e p="UIManager.cs" t="Include" />
         <e p="Unity-Logs-Viewer" t="Include">
           <e p="Reporter" t="Include">
             <e p="Editor" t="Include">

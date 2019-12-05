@@ -8,19 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="48 Particle Effect Pack" t="Include">
-          <e p="Script" t="Include">
-            <e p="csDestroyEffect.cs" t="Include" />
-            <e p="csMouseOrbit.cs" t="Include" />
-            <e p="csParticleEffectPackLightControl.cs" t="Include" />
-            <e p="csParticleMove.cs" t="Include" />
-            <e p="csShowAllEffect.cs" t="Include" />
-          </e>
-          <e p="ShurikenEffectEditor" t="Include">
-            <e p="csShurikenEffectChanger.cs" t="Include" />
-            <e p="csShurikenEffectEditor.cs" t="Include" />
-          </e>
-        </e>
         <e p="Editor" t="Include">
           <e p="Vuforia" t="Include">
             <e p="CylinderTargetTextures" t="Include">
@@ -28,6 +15,17 @@
                 <e p="authoringinfo.xml" t="Include" />
               </e>
             </e>
+          </e>
+        </e>
+        <e p="explosionsoundslite" t="Include">
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="Fx Explosion Pack" t="Include">
+          <e p="Script" t="Include">
+            <e p="csDemoScenceControl.cs" t="Include" />
+            <e p="csLightControl.cs" t="Include" />
+            <e p="csMouseOrbit.cs" t="Include" />
+            <e p="DestroyEffect.cs" t="Include" />
           </e>
         </e>
         <e p="Lean" t="Include">
@@ -120,6 +118,7 @@
             <e p="Minimalist Sky.shader" t="Include" />
           </e>
         </e>
+        <e p="ParticleScaler.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="EndGameScript.cs" t="Include" />
           <e p="EnemyBot.cs" t="Include" />

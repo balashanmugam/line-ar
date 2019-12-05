@@ -71,10 +71,13 @@ public class GameManager : Singleton<GameManager> {
                 case 0:
                     enemy1 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
                         spawnPoint[randomPoint].rotation);
+                    enemy1.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
                     break;
                 case 1:
                     enemy2 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
                         spawnPoint[randomPoint].rotation);
+                    enemy2.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
+
                     break;
             }
         }

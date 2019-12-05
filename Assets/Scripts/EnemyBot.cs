@@ -28,27 +28,28 @@ public class EnemyBot : MonoBehaviour {
         }
     }
 
+    public Transform PathParent
+    {
+        get => pathParent;
+        set {
+            pathParent = value;
+            int pathRandomIndex = Random.Range(0, pathParent.childCount);
+            for (int i = 0; i < pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.childCount; i++) {
+                pathPoints.Add(pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.GetChild(i));
+            }
+        }
+    }
+
     private void Start() {
         mesh = GetComponent<MeshGenerator>();
     }
 
     private void OnEnable() {
         // Finding spawn point
-
-        bool isUnique = false;
-        while (!isUnique) {
-            var randomIndex = Random.Range(0, GameManager.Instance.SpawnPoint.Count);
-            pathParent = GameManager.Instance.SpawnPoint[randomIndex];
-            if (GameManager.Instance.SpawnBools[randomIndex] == true) continue;
-            else {
-                isUnique = true;
-            }
-        }
-
-        int pathRandomIndex = Random.Range(0, pathParent.childCount);
-        for (int i = 0; i < pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.childCount; i++) {
-            pathPoints.Add(pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.GetChild(i));
-        }
+//        int pathRandomIndex = Random.Range(0, pathParent.childCount);
+//        for (int i = 0; i < pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.childCount; i++) {
+//            pathPoints.Add(pathParent.transform.GetChild(pathRandomIndex).gameObject.transform.GetChild(i));
+//        }
     }
     // Follow the path 
 

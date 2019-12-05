@@ -45,17 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGrow: 0
-  unitCircle: {fileID: 1801241420949308585, guid: aafc0780d535e442f877440891dfddaa,
-    type: 3}
-  rbCirclePrefab: {fileID: 0}
-  last: {fileID: 0}
+  isPlayer: 0
   TIMESTEP: 0.025
   timer: 0.05
   horizontal: 0
-  input: {fileID: 0}
-  turnRot: {x: 0, y: 10, z: 0}
+  unitCircle: {fileID: 1801241420949308585, guid: aafc0780d535e442f877440891dfddaa,
+    type: 3}
+  rbCirclePrefab: {fileID: 1801241420949308585, guid: cf3281dc90b494d69a12b50b5a8798d0,
+    type: 3}
+  last: {fileID: 0}
   rbCircle: {fileID: 0}
-  isPlayer: 0
+  input: {fileID: 0}
 --- !u!114 &6071015583871249587
 MonoBehaviour:
   m_ObjectHideFlags: 0

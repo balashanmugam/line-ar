@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Windows.Markup;
 using LineAR;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -59,6 +57,8 @@ public class GameManager : Singleton<GameManager> {
             spawnPoint.Add(_spawnPointParent.transform.GetChild(i));
             spawnBools.Add(false);
         }
+        
+        //BeginGame();
     }
 
     public void WinGame() {

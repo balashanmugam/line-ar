@@ -12,6 +12,8 @@ public class PlayerInput : MonoBehaviour {
     // Should have an instance of the player.
     [SerializeField] private MeshGenerator player;
     [SerializeField] private bool isAlive = true;
+    [SerializeField] private GameObject rocket;
+    
 
     private float horizontal;
 
@@ -38,6 +40,7 @@ public class PlayerInput : MonoBehaviour {
     private void Update() {
         if (Input.GetButtonDown("Jump")) {
             player.StartGrow = !player.StartGrow;
+            // Create bomb
         }
 
         // Platform specific input.

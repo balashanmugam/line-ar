@@ -57,6 +57,8 @@ MonoBehaviour:
   last: {fileID: 0}
   rbCircle: {fileID: 0}
   input: {fileID: 0}
+  explosionAudio: {fileID: 3815016788968508380, guid: cf3281dc90b494d69a12b50b5a8798d0,
+    type: 3}
 --- !u!114 &1405317232
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -66,11 +66,14 @@ public class GameManager : Singleton<GameManager> {
     public void WinGame() {
         UIManager.Instance.ToggleEndGame(true);
         UIManager.Instance.SetEndMessage("You are Victorious!", "high");
+        Time.timeScale = 0;
     }
 
     public void DefeatedGame() {
         UIManager.Instance.ToggleEndGame(true);
         UIManager.Instance.SetEndMessage("You were defeated!", "low");
+        Time.timeScale = 0;
+
     }
 
     public void BeginGame() {
@@ -85,7 +88,6 @@ public class GameManager : Singleton<GameManager> {
 
         enemy1.GetComponent<MeshGenerator>().StartGrow = true;
         enemy2.GetComponent<MeshGenerator>().StartGrow = true;
-
         player.GetComponent<MeshGenerator>().StartGrow = true;
     }
 

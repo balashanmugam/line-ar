@@ -21,6 +21,8 @@ namespace LineAR {
         [SerializeField] private GameObject rbCircle;
 
         [SerializeField] private PlayerInput input;
+        [SerializeField] private AudioSource explosionAudio;
+        
 
         public bool StartGrow
         {
@@ -42,6 +44,7 @@ namespace LineAR {
         public void SpawnExplosion() {
             // Spawn explosion at the point of collision
             var explosion = Instantiate(explosionPrefab, rbCircle.transform.position, rbCircle.transform.rotation);
+            explosionAudio.Play();
         }
 
         private void Awake() {

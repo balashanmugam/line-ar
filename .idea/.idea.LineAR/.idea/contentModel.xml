@@ -28,6 +28,7 @@
             <e p="DestroyEffect.cs" t="Include" />
           </e>
         </e>
+        <e p="HUD.cs" t="Include" />
         <e p="Lean" t="Include">
           <e p="Common" t="Include">
             <e p="Examples" t="Include">
@@ -118,7 +119,6 @@
             <e p="Minimalist Sky.shader" t="Include" />
           </e>
         </e>
-        <e p="ParticleScaler.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="EndGameScript.cs" t="Include" />
           <e p="EnemyBot.cs" t="Include" />
@@ -128,7 +128,9 @@
           <e p="MeshCollision.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="OptionsMenu.cs" t="Include" />
+          <e p="ParticleScaler.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="Rocket.cs" t="Include" />
           <e p="SoundScript.cs" t="Include" />
           <e p="Stadium.cs" t="Include" />
           <e p="SwitchEndGame.cs" t="Include" />
@@ -211,6 +213,35 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="TowerDefence_Vsquad" t="Include">
+          <e p="INFO" t="Include">
+            <e p="Info.txt" t="Include" />
+          </e>
+          <e p="Materials" t="Include">
+            <e p="Scene" t="Include">
+              <e p="sky.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="BulletTank.cs" t="Include" />
+            <e p="EngineTank.cs" t="Include" />
+            <e p="Scripts_towers_enemies" t="Include">
+              <e p="Enemy.cs" t="Include" />
+              <e p="Enemy_tanks" t="Include">
+                <e p="TankEnemy.cs" t="Include" />
+                <e p="TankEnemyBullet.cs" t="Include" />
+              </e>
+              <e p="EnemyBullet.cs" t="Include" />
+              <e p="EnemyHp.cs" t="Include" />
+              <e p="Tower.cs" t="Include" />
+              <e p="TowerBullet.cs" t="Include" />
+              <e p="TowerHP.cs" t="Include" />
+              <e p="TowerTrigger.cs" t="Include" />
+              <e p="WaveSpawn.cs" t="Include" />
+              <e p="WaveSpawnTanks.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Unity-Logs-Viewer" t="Include">

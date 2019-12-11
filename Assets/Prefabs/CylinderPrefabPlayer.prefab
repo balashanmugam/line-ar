@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2644894908835265911}
   m_Layer: 0
   m_Name: CylinderPrefabPlayer
-  m_TagString: Untagged
+  m_TagString: character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +42,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760721722229054018, guid: c1d31818ee60249e3bffdcd4558e173b,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
       objectReference: {fileID: 0}
     - target: {fileID: 4651794497666599417, guid: c1d31818ee60249e3bffdcd4558e173b,
         type: 3}

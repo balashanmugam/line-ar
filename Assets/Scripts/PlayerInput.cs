@@ -13,7 +13,6 @@ public class PlayerInput : MonoBehaviour {
     [SerializeField] private MeshGenerator player;
     [SerializeField] private bool isAlive = true;
     [SerializeField] private GameObject rocket;
-    
 
     private float horizontal;
 
@@ -33,21 +32,38 @@ public class PlayerInput : MonoBehaviour {
         }
     }
 
+    private void OnEnable() {
+        // Subscribe to powerup
+        PlayerPowerUpUI.OnPowerUpPressed += LaunchBomb;
+
+    }
+
+    private void OnDisable() {
+        PlayerPowerUpUI.OnPowerUpPressed -= LaunchBomb;
+    }
+
+    private void LaunchBomb() {
+        // Instantiate bomb
+        var bomb = Instantiate(rocket, player.RbCircle.transform.position + (player.RbCircle.transform.forward * 0.1f), Quaternion.Euler(player.RbCircle.transform.rotation.eulerAngles));
+    }
+
     private void Start() {
         player = GetComponent<MeshGenerator>();
+        player.StartGrow = true;
     }
 
     private void Update() {
         if (Input.GetButtonDown("Jump")) {
-            player.StartGrow = !player.StartGrow;
+            //player.StartGrow = !player.StartGrow;
             // Create bomb
+            LaunchBomb();
+            
         }
 
         // Platform specific input.
 #if UNITY_EDITOR_OSX || UNITY_EDITOR || UNITY_EDITOR_64
         horizontal = Input.GetAxis("Horizontal");
 #endif
-
         // control input for mobile.
 #if UNITY_ANDROID 
         if (!player.StartGrow) return;

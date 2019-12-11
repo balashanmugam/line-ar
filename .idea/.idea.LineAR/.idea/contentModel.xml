@@ -119,6 +119,7 @@
             <e p="Minimalist Sky.shader" t="Include" />
           </e>
         </e>
+        <e p="PlayerPowerUpUI.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="EndGameScript.cs" t="Include" />
           <e p="EnemyBot.cs" t="Include" />

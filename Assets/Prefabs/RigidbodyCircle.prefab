@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 3760721722229054018, guid: c1d31818ee60249e3bffdcd4558e173b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4651794497666599417, guid: c1d31818ee60249e3bffdcd4558e173b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,31 +200,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5691919294677716310, guid: c1d31818ee60249e3bffdcd4558e173b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 561e5efe5327efa4eaa4e07a9b681b3b, type: 2}
-    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 4.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8861583432898451200, guid: c1d31818ee60249e3bffdcd4558e173b,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1d31818ee60249e3bffdcd4558e173b, type: 3}

@@ -21,8 +21,8 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField] private int enemiesCount = 1;
 
     [SerializeField] private int enemyLostCount = 0;
-    
-    
+
+
     public Transform SpawnPointParent
     {
         get => _spawnPointParent;
@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager> {
         get => enemyLostCount;
         set {
             enemyLostCount = value;
-            if (enemyLostCount == (enemiesCount + 1) ){
+            if (enemyLostCount == (enemiesCount + 1)) {
                 WinGame();
             }
         }
@@ -58,7 +58,7 @@ public class GameManager : Singleton<GameManager> {
             spawnBools.Add(false);
         }
 #if UNITY_EDITOR_OSX || UNITY_EDITOR
-    // Testing code.
+        // Testing code.
         BeginGame();
 #endif
     }
@@ -73,14 +73,12 @@ public class GameManager : Singleton<GameManager> {
         UIManager.Instance.ToggleEndGame(true);
         UIManager.Instance.SetEndMessage("You were defeated!", "low");
         Time.timeScale = 0;
-
     }
 
     public void BeginGame() {
         // Spawn Player 
         // Call function from Ground plane placement
         StartCoroutine(SpawnCharacters());
-        
     }
 
     IEnumerator StartGame() {

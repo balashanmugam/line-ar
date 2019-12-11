@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6071015583871249587}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGrow: 0
   isPlayer: 0
-  TIMESTEP: 0.025
+  TIMESTEP: 0.01
   timer: 0.05
   horizontal: 0
   unitCircle: {fileID: 1801241420949308585, guid: 07b838f787bf6464cb942350acde642c,

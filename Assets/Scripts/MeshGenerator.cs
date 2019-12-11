@@ -10,6 +10,7 @@ namespace LineAR {
         private float currentAngle = 0;
         private float angle = 10;
         private const float turnAngle = 2;
+        
         [SerializeField] private float TIMESTEP = 0.01f;
         [SerializeField] private float timer = 0.5f;
         [SerializeField] private float horizontal;
@@ -39,6 +40,12 @@ namespace LineAR {
         {
             get => last;
             set => last = value;
+        }
+
+        public GameObject RbCircle
+        {
+            get => rbCircle;
+            set => rbCircle = value;
         }
 
         public void SpawnExplosion() {

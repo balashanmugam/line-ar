@@ -35,7 +35,6 @@ public class PlayerInput : MonoBehaviour {
     private void OnEnable() {
         // Subscribe to powerup
         PlayerPowerUpUI.OnPowerUpPressed += LaunchBomb;
-
     }
 
     private void OnDisable() {
@@ -44,7 +43,8 @@ public class PlayerInput : MonoBehaviour {
 
     private void LaunchBomb() {
         // Instantiate bomb
-        var bomb = Instantiate(rocket, player.RbCircle.transform.position + (player.RbCircle.transform.forward * 0.1f), Quaternion.Euler(player.RbCircle.transform.rotation.eulerAngles));
+        var bomb = Instantiate(rocket, player.RbCircle.transform.position + (player.RbCircle.transform.forward * 0.05f),
+            Quaternion.Euler(player.RbCircle.transform.rotation.eulerAngles));
     }
 
     private void Start() {
@@ -53,19 +53,20 @@ public class PlayerInput : MonoBehaviour {
     }
 
     private void Update() {
+        // Testing in Editor alone
+#if UNITY_EDITOR_64 || UNITY_EDITOR || UNITY_EDITOR_OSX
         if (Input.GetButtonDown("Jump")) {
-            //player.StartGrow = !player.StartGrow;
             // Create bomb
-            LaunchBomb();
-            
+            if (isAlive)
+                LaunchBomb();
         }
-
+#endif
         // Platform specific input.
 #if UNITY_EDITOR_OSX || UNITY_EDITOR || UNITY_EDITOR_64
         horizontal = Input.GetAxis("Horizontal");
 #endif
         // control input for mobile.
-#if UNITY_ANDROID 
+#if UNITY_ANDROID
         if (!player.StartGrow) return;
         if (Input.touchCount > 0) {
             Touch t = Input.GetTouch(0);

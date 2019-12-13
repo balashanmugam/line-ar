@@ -25,7 +25,7 @@ public class Rocket : MonoBehaviour {
                 // create an explosion and create sphere collider and destroy only the meshes in it.
                 Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
 
-                Collider[] hitColliders = Physics.OverlapSphere(pointOfExplosion.transform.position, 0.1f);
+                Collider[] hitColliders = Physics.OverlapSphere(pointOfExplosion.transform.position, 0.04f);
                 int i = 0;
                 while (i < hitColliders.Length) {
                     if (hitColliders[i].transform.CompareTag("character")) {

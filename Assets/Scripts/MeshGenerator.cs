@@ -68,11 +68,6 @@ namespace LineAR {
             
         }
 
-        private void Start() {
-            if (GetComponentInChildren<PlayerInput>() != null) {
-                isPlayer = true;
-            }
-        }
         private void Update() {
             if (!startGrow) return;
             if (!isPlayer) return;
@@ -110,7 +105,7 @@ namespace LineAR {
             rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2f));
             rbCircle.transform.rotation = last.transform.rotation;
             
-            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f),
+            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f * 0.5f),
                 rot, gameObject.transform);
 
             if (obj != null) {

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startGrow: 0
   isPlayer: 0
-  TIMESTEP: 0.01
-  timer: 0.05
+  TIMESTEP: 0.012
+  timer: 0.5
   horizontal: 0
   unitCircle: {fileID: 1801241420949308585, guid: 07b838f787bf6464cb942350acde642c,
     type: 3}

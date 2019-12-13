@@ -60,11 +60,12 @@ namespace LineAR {
             input = GetComponent<PlayerInput>();
 
             // instantiate RB circle
-
             rbCircle = Instantiate(rbCirclePrefab, last.transform.position + (last.transform.forward * (0.005f * 2)),
                 last.transform.rotation, gameObject.transform);
 
-            Spawn(Quaternion.identity);
+            currentAngle = last.transform.rotation.eulerAngles.y;
+            Spawn(last.transform.rotation);
+            
         }
 
         private void Start() {
@@ -90,6 +91,7 @@ namespace LineAR {
         }
 
         private void FixedUpdate() {
+            
             // keep spawning
             if (!startGrow) return;
 
@@ -103,12 +105,13 @@ namespace LineAR {
 
         private void Spawn(Quaternion rot) {
             //spawn a small cylinder
-            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f),
-                rot, gameObject.transform);
-
+            
             // Spawn that single rigidbody infront of this.
             rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2f));
             rbCircle.transform.rotation = last.transform.rotation;
+            
+            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f),
+                rot, gameObject.transform);
 
             if (obj != null) {
                 last = obj;

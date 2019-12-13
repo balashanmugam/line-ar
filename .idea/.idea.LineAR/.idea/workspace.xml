@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2199d5-6c85-4927-9559-babf07079ae1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Exploson6.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Exploson6.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fx Explosion Pack/Prefebs/Exploson6.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fx Explosion Pack/Prefebs/Exploson6.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefabPlayer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CylinderPrefabPlayer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RigidbodyCircle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RigidbodyCircle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rocket Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rocket Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyBot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Prefabs/Bullets/GB_piercer_rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Prefabs/Bullets/GB_piercer_rocket.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,11 +67,11 @@
         <option value="$PROJECT_DIR$/Assets/HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBot.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +134,8 @@
       <workItem from="1574499210749" duration="10520000" />
       <workItem from="1574728662660" duration="4466000" />
       <workItem from="1575405443547" duration="9449000" />
-      <workItem from="1575932138337" duration="6788000" />
+      <workItem from="1575932138337" duration="7012000" />
+      <workItem from="1576203276916" duration="1320000" />
     </task>
     <servers />
   </component>

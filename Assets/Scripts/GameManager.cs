@@ -93,32 +93,32 @@ public class GameManager : Singleton<GameManager> {
         yield return new WaitForSeconds(0.1f);
         bool isUnique = false;
 
-        // Spawn enemies
-        for (int i = 0; i <= enemiesCount; i++) {
-            isUnique = false;
-            while (!isUnique) {
-                randomPoint = Random.Range(0, _spawnPointParent.childCount);
-                if (spawnBools[randomPoint] == true) continue;
-                else {
-                    isUnique = true;
-                    spawnBools[randomPoint] = true;
-                }
-            }
-
-            switch (i) {
-                case 0:
-                    enemy1 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
-                        spawnPoint[randomPoint].rotation);
-                    enemy1.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
-                    break;
-                case 1:
-                    enemy2 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
-                        spawnPoint[randomPoint].rotation);
-                    enemy2.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
-
-                    break;
-            }
-        }
+//        // Spawn enemies
+//        for (int i = 0; i <= enemiesCount; i++) {
+//            isUnique = false;
+//            while (!isUnique) {
+//                randomPoint = Random.Range(0, _spawnPointParent.childCount);
+//                if (spawnBools[randomPoint] == true) continue;
+//                else {
+//                    isUnique = true;
+//                    spawnBools[randomPoint] = true;
+//                }
+//            }
+//
+//            switch (i) {
+//                case 0:
+//                    enemy1 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
+//                        spawnPoint[randomPoint].rotation);
+//                    enemy1.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
+//                    break;
+//                case 1:
+//                    enemy2 = Instantiate(EnemyPrefab, spawnPoint[randomPoint].position,
+//                        spawnPoint[randomPoint].rotation);
+//                    enemy2.GetComponent<EnemyBot>().PathParent = spawnPoint[randomPoint];
+//
+//                    break;
+//            }
+//        }
 
         //Spawn player
 
@@ -133,8 +133,8 @@ public class GameManager : Singleton<GameManager> {
             }
         }
 
-        player = Instantiate(playerPrefab, spawnPoint[randomPoint].position, spawnPoint[randomPoint].rotation);
-
+        player = Instantiate(playerPrefab, spawnPoint[randomPoint].position, Quaternion.Euler(spawnPoint[randomPoint].rotation.eulerAngles));
+        Debug.LogError("Players Spawned log point.");
         StartCoroutine(StartGame());
     }
 }

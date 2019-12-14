@@ -57,7 +57,6 @@ public class GameManager : Singleton<GameManager> {
     }
 
     private void Start() {
-
         ground = _spawnPointParent.parent;
         for (int i = 0; i < _spawnPointParent.childCount; i++) {
             spawnPoint.Add(_spawnPointParent.transform.GetChild(i));
@@ -74,6 +73,8 @@ public class GameManager : Singleton<GameManager> {
     }
 
     IEnumerator Win() {
+        HUD.Instance.ToggleScoreAndPower(false);
+
         yield return new WaitForSeconds(1.5f);
         UIManager.Instance.ToggleEndGame(true);
         UIManager.Instance.SetEndMessage("You are Victorious!", "high");
@@ -81,9 +82,13 @@ public class GameManager : Singleton<GameManager> {
     }
 
     IEnumerator Lose() {
+        HUD.Instance.ToggleScoreAndPower(false);
+
         yield return new WaitForSeconds(1.5f);
+
         UIManager.Instance.ToggleEndGame(true);
         UIManager.Instance.SetEndMessage("You were defeated!", "low");
+
         Time.timeScale = 0;
     }
 
@@ -94,12 +99,19 @@ public class GameManager : Singleton<GameManager> {
 
     public void BeginGame() {
         // Spawn Player 
-        // Call function from Ground plane placement
         StartCoroutine(SpawnCharacters());
+        HUD.Instance.ToggleReady(true);
+    }
+
+    public void PlayGame() {
+        StartCoroutine(StartGame());
     }
 
     IEnumerator StartGame() {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+
+        if (player != null)
+            player.GetComponent<MeshGenerator>().StartGrow = true;
 
         if (enemy1 != null)
             enemy1.GetComponent<MeshGenerator>().StartGrow = true;
@@ -159,6 +171,5 @@ public class GameManager : Singleton<GameManager> {
 
         player = Instantiate(playerPrefab, spawnPoint[randomPoint].position,
             Quaternion.Euler(spawnPoint[randomPoint].rotation.eulerAngles));
-        StartCoroutine(StartGame());
     }
 }

@@ -13,7 +13,6 @@ namespace LineAR
         /// </summary>
         public void DisableAnchorInput() {
             GetComponent<PlaneFinderBehaviour>().enabled = false;
-            
             GetComponent<AnchorInputListenerBehaviour>().enabled = false;
         }
     }

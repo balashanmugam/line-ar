@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c2199d5-6c85-4927-9559-babf07079ae1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Desert_land_3.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Desert_land_3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Powerup.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Powerup.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rocket-icon-vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/rocket-icon-vector.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LineAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rocket Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rocket Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mesh-test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Stadium.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Stadium.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Materials/Cubes/GB_River_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Materials/Cubes/GB_River_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Materials/Cubes/GB_Sand_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Materials/Cubes/GB_Sand_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Prefabs/Cubes/GB_Sand_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TowerDefence_Vsquad/Prefabs/Cubes/GB_Sand_1.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,21 +70,22 @@
         <option value="$PROJECT_DIR$/Assets/MeshGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GamaManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Stadium.cs" />
         <option value="$PROJECT_DIR$/Assets/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EndGameScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleScaler.cs" />
-        <option value="$PROJECT_DIR$/Assets/HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Stadium.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerPowerUpUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/HUD.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Rocket.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" />
       </list>
     </option>
   </component>
@@ -146,7 +150,7 @@
       <workItem from="1575405443547" duration="9449000" />
       <workItem from="1575932138337" duration="7012000" />
       <workItem from="1576203276916" duration="3180000" />
-      <workItem from="1576275918258" duration="1998000" />
+      <workItem from="1576275918258" duration="6630000" />
     </task>
     <servers />
   </component>

@@ -74,3 +74,6 @@ MonoBehaviour:
   player: {fileID: 0}
   isAlive: 1
   rocket: {fileID: 3387693592536464707, guid: 33e9275e3defa4d0098d05845990f025, type: 3}
+  bombTimer: 1.5
+  bombTicker: 0
+  isReadyForBomb: 0

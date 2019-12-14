@@ -15,21 +15,20 @@ public class MeshCollision : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Ground Plane Stage" || other.gameObject.name == "Ground") return;
-        
+
         if (enemy != null) {
             if (!enemy.IsAlive) {
                 return;
             }
-            
-            enemy.IsAlive = false;
 
+            enemy.IsAlive = false;
             Debug.Log("Enemy Collided with " + other.gameObject.name);
         }
         else if (player != null) {
             if (!player.IsAlive) return;
             Debug.Log("Player Collided with " + other.gameObject.name);
             player.IsAlive = false;
-            
+
             GameManager.Instance.DefeatedGame();
         }
     }

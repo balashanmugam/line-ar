@@ -37,6 +37,10 @@ public class Rocket : MonoBehaviour {
 
                 gameObject.SetActive(false);
             }
+            else { // hitting other colliders Like walls and stuff
+                Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+                gameObject.SetActive(false);
+            }
         }
     }
 }

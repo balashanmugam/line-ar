@@ -25,7 +25,4 @@ public class PlayerPowerUpUI : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Hit with " + other.gameObject.name);
     }
-
-    // Update is called once per frame
-    void Update() { }
 }

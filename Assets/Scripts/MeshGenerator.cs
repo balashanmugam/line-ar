@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 
-
 namespace LineAR {
     public class MeshGenerator : MonoBehaviour {
         [SerializeField] private bool startGrow = false;
@@ -10,7 +9,7 @@ namespace LineAR {
         private float currentAngle = 0;
         private float angle = 10;
         private const float turnAngle = 2;
-        
+
         [SerializeField] private float TIMESTEP = 0.01f;
         [SerializeField] private float timer = 0.5f;
         [SerializeField] private float horizontal;
@@ -23,7 +22,7 @@ namespace LineAR {
 
         [SerializeField] private PlayerInput input;
         [SerializeField] private AudioSource explosionAudio;
-        
+
 
         public bool StartGrow
         {
@@ -48,6 +47,12 @@ namespace LineAR {
             set => rbCircle = value;
         }
 
+        public bool IsPlayer
+        {
+            get => isPlayer;
+            set => isPlayer = value;
+        }
+
         public void SpawnExplosion() {
             // Spawn explosion at the point of collision
             var explosion = Instantiate(explosionPrefab, rbCircle.transform.position, rbCircle.transform.rotation);
@@ -65,7 +70,6 @@ namespace LineAR {
 
             currentAngle = last.transform.rotation.eulerAngles.y;
             Spawn(last.transform.rotation);
-            
         }
 
         private void Update() {
@@ -86,7 +90,6 @@ namespace LineAR {
         }
 
         private void FixedUpdate() {
-            
             // keep spawning
             if (!startGrow) return;
 
@@ -100,11 +103,11 @@ namespace LineAR {
 
         private void Spawn(Quaternion rot) {
             //spawn a small cylinder
-            
+
             // Spawn that single rigidbody infront of this.
             rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2f));
             rbCircle.transform.rotation = last.transform.rotation;
-            
+
             var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f * 0.5f),
                 rot, gameObject.transform);
 

@@ -16,6 +16,9 @@ public class PlayerInput : MonoBehaviour {
 
     private float horizontal;
 
+    [SerializeField] private float bombTimer = 1.5f, bombTicker = 0;
+    [SerializeField] private bool isReadyForBomb = true;
+
     public float Horizontal
     {
         get => horizontal;
@@ -43,16 +46,27 @@ public class PlayerInput : MonoBehaviour {
 
     private void LaunchBomb() {
         // Instantiate bomb
+        if (!isReadyForBomb) return;
         var bomb = Instantiate(rocket, player.RbCircle.transform.position + (player.RbCircle.transform.forward * 0.05f),
             Quaternion.Euler(player.RbCircle.transform.rotation.eulerAngles));
+        isReadyForBomb = false;
+        HUD.Instance.TogglePowerUp(false);
+
     }
 
     private void Start() {
         player = GetComponent<MeshGenerator>();
-        player.StartGrow = true;
+        player.IsPlayer = true;
     }
 
     private void Update() {
+        bombTicker += Time.deltaTime;
+        if (bombTicker >= bombTimer) {
+            isReadyForBomb = true;
+            bombTicker = 0;
+            HUD.Instance.TogglePowerUp(true);
+        }
+
         // Testing in Editor alone
 #if UNITY_EDITOR_64 || UNITY_EDITOR || UNITY_EDITOR_OSX
         if (Input.GetButtonDown("Jump")) {

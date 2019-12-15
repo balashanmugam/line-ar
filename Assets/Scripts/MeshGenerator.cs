@@ -22,7 +22,7 @@ namespace LineAR {
 
         [SerializeField] private PlayerInput input;
         [SerializeField] private AudioSource explosionAudio;
-
+        
 
         public bool StartGrow
         {
@@ -65,7 +65,7 @@ namespace LineAR {
             input = GetComponent<PlayerInput>();
 
             // instantiate RB circle
-            rbCircle = Instantiate(rbCirclePrefab, last.transform.position + (last.transform.forward * (0.005f * 2)),
+            rbCircle = Instantiate(rbCirclePrefab, last.transform.position + (last.transform.forward ),
                 last.transform.rotation, gameObject.transform);
 
             currentAngle = last.transform.rotation.eulerAngles.y;
@@ -105,7 +105,7 @@ namespace LineAR {
             //spawn a small cylinder
 
             // Spawn that single rigidbody infront of this.
-            rbCircle.transform.position = last.transform.position + (last.transform.forward * (0.005f * 2f));
+            rbCircle.transform.position = last.transform.position + (last.transform.forward * 0.00125f);
             rbCircle.transform.rotation = last.transform.rotation;
 
             var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f * 0.5f),

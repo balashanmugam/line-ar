@@ -19,6 +19,8 @@ public class PlayerInput : MonoBehaviour {
     [SerializeField] private float bombTimer = 1.5f, bombTicker = 0;
     [SerializeField] private bool isReadyForBomb = true;
 
+    [SerializeField] private GameObject canvasIndicator;
+
     public float Horizontal
     {
         get => horizontal;
@@ -35,9 +37,17 @@ public class PlayerInput : MonoBehaviour {
         }
     }
 
+    public MeshGenerator Player
+    {
+        get => player;
+        set => player = value;
+    }
+
     private void OnEnable() {
         // Subscribe to powerup
         PlayerPowerUpUI.OnPowerUpPressed += LaunchBomb;
+        
+        // attach canvas indicator to the rb circle;
     }
 
     private void OnDisable() {
@@ -57,6 +67,9 @@ public class PlayerInput : MonoBehaviour {
     private void Start() {
         player = GetComponent<MeshGenerator>();
         player.IsPlayer = true;
+        
+        canvasIndicator.transform.SetParent(player.RbCircle.transform);
+        
     }
 
     private void Update() {

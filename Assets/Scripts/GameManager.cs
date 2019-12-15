@@ -56,6 +56,12 @@ public class GameManager : Singleton<GameManager> {
         }
     }
 
+    public GameObject Player
+    {
+        get => player;
+        set => player = value;
+    }
+
     private void Start() {
         ground = _spawnPointParent.parent;
         for (int i = 0; i < _spawnPointParent.childCount; i++) {
@@ -77,7 +83,7 @@ public class GameManager : Singleton<GameManager> {
 
         yield return new WaitForSeconds(1.5f);
         UIManager.Instance.ToggleEndGame(true);
-        UIManager.Instance.SetEndMessage("You are Victorious!", "high");
+        UIManager.Instance.SetEndMessage("You are Victorious!", HUD.Instance.Timer.ToString());
         Time.timeScale = 0;
     }
 
@@ -87,7 +93,7 @@ public class GameManager : Singleton<GameManager> {
         yield return new WaitForSeconds(1.5f);
 
         UIManager.Instance.ToggleEndGame(true);
-        UIManager.Instance.SetEndMessage("You were defeated!", "low");
+        UIManager.Instance.SetEndMessage("You were defeated!", HUD.Instance.Timer.ToString());
 
         Time.timeScale = 0;
     }
@@ -171,5 +177,6 @@ public class GameManager : Singleton<GameManager> {
 
         player = Instantiate(playerPrefab, spawnPoint[randomPoint].position,
             Quaternion.Euler(spawnPoint[randomPoint].rotation.eulerAngles));
+        HUD.Instance.PlayerInput = player.GetComponent<PlayerInput>();
     }
 }

@@ -9,6 +9,8 @@ namespace LineAR {
         private float currentAngle = 0;
         private float angle = 10;
         private const float turnAngle = 2;
+        
+        [SerializeField] private int spawnId = 0; // 0 for player,1 for enemy
 
         [SerializeField] private float TIMESTEP = 0.01f;
         [SerializeField] private float timer = 0.5f;
@@ -108,8 +110,11 @@ namespace LineAR {
             rbCircle.transform.position = last.transform.position + (last.transform.forward * 0.00125f);
             rbCircle.transform.rotation = last.transform.rotation;
 
-            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f * 0.5f),
-                rot, gameObject.transform);
+//            var obj = Instantiate(unitCircle, last.transform.position + (last.transform.forward * 0.005f * 0.5f),
+//              rot, gameObject.transform);
+           var obj = ObjectPoolSystem.Instantiate(spawnId,
+               last.transform.position + (last.transform.forward * 0.005f * 0.5f),
+               rot, gameObject.transform);
 
             if (obj != null) {
                 last = obj;

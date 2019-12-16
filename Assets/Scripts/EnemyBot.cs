@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using LineAR;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class EnemyBot : MonoBehaviour {
@@ -18,6 +19,13 @@ public class EnemyBot : MonoBehaviour {
 
     [SerializeField] private bool isAlive = true;
 
+    //making enemies shoot bombs
+    [SerializeField] private GameObject rocket;
+    [SerializeField] private bool isReadyForBomb;
+
+    [SerializeField] private float bombTicker;
+    [SerializeField] private float bombTimer = 1.5f;
+
     public bool IsAlive
     {
         get => isAlive;
@@ -28,6 +36,16 @@ public class EnemyBot : MonoBehaviour {
                 GameManager.Instance.EnemyLostCount++;
             }
         }
+    }
+
+    // launch bomb when the the player is close to the curves.
+    private void LaunchBomb() {
+        // Instantiate bomb
+        if (!isReadyForBomb) return;
+        var bomb = Instantiate(rocket, mesh.RbCircle.transform.position + (mesh.RbCircle.transform.forward * 0.05f),
+            Quaternion.Euler(mesh.RbCircle.transform.rotation.eulerAngles));
+        isReadyForBomb = false;
+        Debug.Log("Bomb LAunched!");
     }
 
     public Transform PathParent
@@ -41,9 +59,11 @@ public class EnemyBot : MonoBehaviour {
             }
         }
     }
+
     private void Start() {
         mesh = GetComponent<MeshGenerator>();
     }
+
     public void Follow() {
         // Look at point
 
@@ -61,6 +81,31 @@ public class EnemyBot : MonoBehaviour {
         Quaternion rot = Quaternion.LookRotation((target.transform.position - mesh.Last.transform.position));
         mesh.Last.transform.rotation = Quaternion.Lerp(transform.rotation, rot, Time.deltaTime * 1000);
     }
+
+    private void Update() {
+        RaycastHit hit;
+        //Debug.DrawRay(mesh.RbCircle.transform.position + (mesh.RbCircle.transform.forward * 0.05f), mesh.RbCircle.transform.forward * 0.5f, Color.cyan);
+
+        bombTicker += Time.deltaTime;
+        if (!(bombTicker >= bombTimer)) return;
+        isReadyForBomb = true;
+        bombTicker = 0;
+
+
+        if (!isAlive) return;
+        if (!isReadyForBomb) return;
+        // raycast
+        if (Physics.Raycast(mesh.RbCircle.transform.position+(mesh.RbCircle.transform.forward * 0.05f), mesh.RbCircle.transform.forward * 0.5f, out hit)) {
+//            Debug.Log("Hitting with " + hit.collider.gameObject.name);
+//            Debug.DrawLine(mesh.RbCircle.transform.position,hit.collider.transform.position,Color.magenta,2);
+
+            if (hit.collider.CompareTag("character")) {
+                //Debug.DrawRay(mesh.RbCircle.transform.position, mesh.RbCircle.transform.forward * 0.5f, Color.cyan);
+                LaunchBomb();
+            }
+        }
+    }
+
 
     private void FixedUpdate() {
         Follow();

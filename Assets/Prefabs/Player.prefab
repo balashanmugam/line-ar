@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69941ae46fd9d4d57bb61911fed6afbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGrow: 0
+  startGrow: 1
   isPlayer: 0
+  spawnId: 0
   TIMESTEP: 0.02
   timer: 0.5
   horizontal: 0

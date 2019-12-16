@@ -47,7 +47,6 @@ public class PlayerInput : MonoBehaviour {
         // Subscribe to powerup
         PlayerPowerUpUI.OnPowerUpPressed += LaunchBomb;
         
-        // attach canvas indicator to the rb circle;
     }
 
     private void OnDisable() {

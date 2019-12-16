@@ -28,7 +28,6 @@
             <e p="DestroyEffect.cs" t="Include" />
           </e>
         </e>
-        <e p="HUD.cs" t="Include" />
         <e p="Lean" t="Include">
           <e p="Common" t="Include">
             <e p="Examples" t="Include">
@@ -119,18 +118,20 @@
             <e p="Minimalist Sky.shader" t="Include" />
           </e>
         </e>
-        <e p="PlayerPowerUpUI.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="EndGameScript.cs" t="Include" />
           <e p="EnemyBot.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="HUD.cs" t="Include" />
           <e p="LevelLoader.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MeshCollision.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
+          <e p="ObjectPoolSystem.cs" t="Include" />
           <e p="OptionsMenu.cs" t="Include" />
           <e p="ParticleScaler.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="PlayerPowerUpUI.cs" t="Include" />
           <e p="Rocket.cs" t="Include" />
           <e p="SoundScript.cs" t="Include" />
           <e p="Stadium.cs" t="Include" />

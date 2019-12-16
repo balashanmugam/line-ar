@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69941ae46fd9d4d57bb61911fed6afbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startGrow: 0
+  startGrow: 1
   isPlayer: 0
+  spawnId: 1
   TIMESTEP: 0.02
   timer: 0.5
   horizontal: 0
@@ -77,3 +78,7 @@ MonoBehaviour:
   mesh: {fileID: 0}
   thresholdDistance: 0.08
   isAlive: 1
+  rocket: {fileID: 3387693592536464707, guid: 33e9275e3defa4d0098d05845990f025, type: 3}
+  isReadyForBomb: 0
+  bombTicker: 0
+  bombTimer: 1.5

@@ -6,9 +6,9 @@ An AR game made using Unity 3D and Vuforia engine as cmpt-742 project at Simon F
 
 This game is an arcade AR game. The player starts the game by finding an anchor and tapping it to spawn the arena.
 
-The player's curve can be identified with a green marker on the screen.
 ![Menu](./line-ar/Screenshot_20191215-230724.jpg)
 
+The player's curve can be identified with a green marker on the screen.
 Also, to add a bit more dynamics to the game, the player and the bots can shoot through other player's curve.
 ![Menu](./line-ar/Screenshot_20191215-231841.jpg)
 

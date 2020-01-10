@@ -18,8 +18,7 @@ The player SHOULD avoid collision with the two other bots and walls of the bound
 
 ### Build
 
-The game is currently build for android and it is available to download at 
-https://drive.google.com/open?id=16jg8Q8EG6w5vxX0EHHvlRYqIpfesFqUS
+The game is currently build for android and it is available to [download](https://drive.google.com/open?id=16jg8Q8EG6w5vxX0EHHvlRYqIpfesFqUS).
 
 ### Future 
  * IOS build
